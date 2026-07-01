@@ -5,7 +5,7 @@ import {
   bookings,
   users,
   payments,
-} from "@db/schema";
+} from "../db/schema.js";
 import { eq, desc, sql, count, and, gte } from "drizzle-orm";
 
 export const adminRouter = createRouter({

@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { createRouter, authedQuery, publicQuery } from "./middleware.js";
 import { getDb } from "./queries/connection.js";
-import { payments, bookings } from "@db/schema";
+import { payments, bookings } from "../db/schema.js";
 import { eq, desc } from "drizzle-orm";
 
 export const paymentRouter = createRouter({

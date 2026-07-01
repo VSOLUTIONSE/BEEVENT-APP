@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { createRouter, authedQuery } from "./middleware.js";
 import { getDb } from "./queries/connection.js";
-import { bookings, bookingAddons, packages, addons } from "@db/schema";
+import { bookings, bookingAddons, packages, addons } from "../db/schema.js";
 import { eq, desc } from "drizzle-orm";
 
 function generateBookingRef(): string {

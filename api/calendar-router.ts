@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { createRouter, authedQuery, adminQuery } from "./middleware.js";
 import { getDb } from "./queries/connection.js";
-import { bookings, blockedDates } from "@db/schema";
+import { bookings, blockedDates } from "../db/schema.js";
 import { eq, and, gte, lte, notInArray } from "drizzle-orm";
 
 export const calendarRouter = createRouter({

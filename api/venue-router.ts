@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { createRouter, publicQuery } from "./middleware.js";
 import { getDb } from "./queries/connection.js";
-import { venue, packages, addons, bookings, blockedDates } from "@db/schema";
+import { venue, packages, addons, bookings, blockedDates } from "../db/schema.js";
 import { eq, and, gte, lte, notInArray } from "drizzle-orm";
 
 export const venueRouter = createRouter({
