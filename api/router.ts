@@ -1,10 +1,10 @@
-import { authRouter } from "./auth-router";
-import { venueRouter } from "./venue-router";
-import { bookingRouter } from "./booking-router";
-import { calendarRouter } from "./calendar-router";
-import { paymentRouter } from "./payment-router";
-import { adminRouter } from "./admin-router";
-import { createRouter, publicQuery } from "./middleware";
+import { authRouter } from "./auth-router.js";
+import { venueRouter } from "./venue-router.js";
+import { bookingRouter } from "./booking-router.js";
+import { calendarRouter } from "./calendar-router.js";
+import { paymentRouter } from "./payment-router.js";
+import { adminRouter } from "./admin-router.js";
+import { createRouter, publicQuery } from "./middleware.js";
 
 export const appRouter = createRouter({
   ping: publicQuery.query(() => ({ ok: true, ts: Date.now() })),

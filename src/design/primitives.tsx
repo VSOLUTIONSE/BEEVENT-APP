@@ -1,6 +1,6 @@
 import { motion, type HTMLMotionProps } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { colors, fonts, spacing, formInput, chip } from "./tokens";
+import { colors, formInput, chip } from "./tokens";
 
 /* ─── Glass Card ─────────────────────────── */
 interface GlassCardProps extends HTMLMotionProps<"div"> {

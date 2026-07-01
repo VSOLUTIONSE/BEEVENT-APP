@@ -1,6 +1,6 @@
 import { z } from "zod";
-import { createRouter, authedQuery, adminQuery } from "./middleware";
-import { getDb } from "./queries/connection";
+import { createRouter, authedQuery, adminQuery } from "./middleware.js";
+import { getDb } from "./queries/connection.js";
 import { bookings, blockedDates } from "@db/schema";
 import { eq, and, gte, lte, notInArray } from "drizzle-orm";
 
@@ -37,8 +37,8 @@ export const calendarRouter = createRouter({
         .from(blockedDates)
         .where(
           and(
-            lte(blockedDates.blockStart, endOfMonth),
-            gte(blockedDates.blockEnd, startOfMonth)
+            lte(blockedDates.blockStart, endOfMonth.toISOString().split("T")[0]),
+            gte(blockedDates.blockEnd, startOfMonth.toISOString().split("T")[0])
           )
         );
 
@@ -60,8 +60,8 @@ export const calendarRouter = createRouter({
     .mutation(async ({ ctx, input }) => {
       const db = getDb();
       await db.insert(blockedDates).values({
-        blockStart: new Date(input.blockStart),
-        blockEnd: new Date(input.blockEnd),
+        blockStart: input.blockStart,
+        blockEnd: input.blockEnd,
         reason: input.reason,
         showAsUnavailable: input.showAsUnavailable,
         createdBy: ctx.user.id,

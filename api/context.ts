@@ -2,8 +2,8 @@ import type { FetchCreateContextFnOptions } from "@trpc/server/adapters/fetch";
 import type { User } from "@db/schema";
 import * as cookie from "cookie";
 import { Session } from "@contracts/constants";
-import { verifySessionToken } from "./lib/session";
-import { findUserById } from "./queries/users";
+import { verifySessionToken } from "./lib/session.js";
+import { findUserById } from "./queries/users.js";
 
 export type TrpcContext = {
   req: Request;

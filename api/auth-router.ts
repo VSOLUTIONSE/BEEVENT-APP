@@ -2,11 +2,11 @@ import { z } from "zod";
 import * as cookie from "cookie";
 import { eq } from "drizzle-orm";
 import { Session } from "@contracts/constants";
-import { createRouter, authedQuery, publicQuery } from "./middleware";
-import { hashPassword, verifyPassword } from "./lib/password";
-import { signSessionToken } from "./lib/session";
-import { getDb } from "./queries/connection";
-import { findUserByEmail, createUser } from "./queries/users";
+import { createRouter, authedQuery, publicQuery } from "./middleware.js";
+import { hashPassword, verifyPassword } from "./lib/password.js";
+import { signSessionToken } from "./lib/session.js";
+import { getDb } from "./queries/connection.js";
+import { findUserByEmail, createUser } from "./queries/users.js";
 import * as schema from "@db/schema";
 
 export const authRouter = createRouter({
