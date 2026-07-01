@@ -8,7 +8,7 @@ async function seed() {
   // Seed admin user
   const hashed = await hashPassword("admin123");
   await db.insert(users).values({
-    email: "admin@velvethall.com",
+    email: "admin@beevelthalls.com",
     passwordHash: hashed,
     name: "Admin",
     role: "admin",
@@ -16,10 +16,10 @@ async function seed() {
 
   // Seed venue
   await db.insert(venue).values({
-    name: "Velvet Hall",
+    name: "BeeVelt Halls",
     tagline: "Lagos' Premier Destination for Unforgettable Events",
     description:
-      "Nestled in the heart of Lagos, Velvet Hall is an architectural masterpiece designed to transform your most cherished moments into timeless memories. With soaring ceilings adorned with hand-painted frescoes, crystal chandeliers that cast ethereal light, and Italian marble floors that echo with elegance, our venue offers an unparalleled setting for weddings, corporate gatherings, concerts, and intimate celebrations. Our dedicated team of event specialists ensures every detail is executed with precision, from custom lighting design to curated catering experiences. The main hall accommodates up to 500 guests, while our intimate garden terrace provides a serene outdoor option for smaller gatherings.",
+      "Nestled in the heart of Lagos, BeeVelt Halls is an architectural masterpiece designed to transform your most cherished moments into timeless memories. With soaring ceilings adorned with hand-painted frescoes, crystal chandeliers that cast ethereal light, and Italian marble floors that echo with elegance, our venue offers an unparalleled setting for weddings, corporate gatherings, concerts, and intimate celebrations. Our dedicated team of event specialists ensures every detail is executed with precision, from custom lighting design to curated catering experiences. The main hall accommodates up to 500 guests, while our intimate garden terrace provides a serene outdoor option for smaller gatherings.",
     capacityMin: 50,
     capacityMax: 500,
     floorArea: 1200,

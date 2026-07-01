@@ -49,7 +49,7 @@ export default function VenueSection() {
             </h2>
 
             <p className="text-[#B0A8A8] leading-relaxed mb-6">
-              Nestled in the heart of Lekki, Velvet Hall is an architectural
+              Nestled in the heart of Lekki, BeeVelt Halls is an architectural
               masterpiece designed to transform your most cherished moments into
               timeless memories. With soaring ceilings adorned with hand-painted
               frescoes, crystal chandeliers that cast ethereal light, and Italian

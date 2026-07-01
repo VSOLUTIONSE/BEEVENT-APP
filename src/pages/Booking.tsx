@@ -205,7 +205,7 @@ export default function Booking() {
             Book Your Event
           </motion.h1>
           <p className="text-[#B0A8A8]">
-            Complete the steps below to reserve Velvet Hall for your special
+            Complete the steps below to reserve BeeVelt Halls for your special
             occasion.
           </p>
 

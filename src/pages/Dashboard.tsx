@@ -85,7 +85,7 @@ export default function Dashboard() {
       <aside className="w-64 bg-[#0F0F11] border-r border-white/5 flex-col hidden lg:flex">
         <div className="p-6">
           <Link to="/" className="font-serif text-xl text-white">
-            Velvet Hall
+            BeeVelt Halls
           </Link>
           <p className="text-xs text-[#B0A8A8] mt-1">Management Dashboard</p>
         </div>
@@ -132,7 +132,7 @@ export default function Dashboard() {
       {/* Mobile Sidebar Toggle */}
       <div className="lg:hidden fixed top-0 left-0 right-0 z-40 bg-[#0F0F11] border-b border-white/5 px-4 py-3 flex items-center justify-between">
         <Link to="/" className="font-serif text-lg text-white">
-          Velvet Hall
+          BeeVelt Halls
         </Link>
         <Link to="/" className="text-sm text-[#B0A8A8]">
           <ArrowLeft className="w-5 h-5" />

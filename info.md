@@ -1,4 +1,4 @@
-# Velvet Hall - Event Centre Booking
+# BeeVelt Halls - Event Centre Booking
 
 Built with Vite + React + Hono/tRPC + Drizzle ORM + Neon (Postgres)
 

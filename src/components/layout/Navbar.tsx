@@ -47,7 +47,7 @@ export default function Navbar() {
               to="/"
               className="font-serif text-xl lg:text-2xl text-white tracking-tight hover:opacity-80 transition-opacity"
             >
-              Velvet Hall
+              BeeVelt Halls
             </Link>
 
             {/* Desktop Nav */}

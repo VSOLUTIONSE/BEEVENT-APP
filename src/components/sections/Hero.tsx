@@ -34,7 +34,7 @@ export default function Hero() {
       <div className="absolute inset-0">
         <img
           src="/images/hero-hall.jpg"
-          alt="Velvet Hall interior"
+          alt="BeeVelt Halls interior"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#030305] via-[#030305]/40 to-transparent" />

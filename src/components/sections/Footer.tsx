@@ -49,7 +49,7 @@ export default function Footer() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <h3 className="font-serif text-2xl text-white mb-4">Velvet Hall</h3>
+            <h3 className="font-serif text-2xl text-white mb-4">BeeVelt Halls</h3>
             <p className="text-sm text-[#B0A8A8] leading-relaxed mb-4">
               Lagos&apos; premier event destination. Where moments become
               memories and celebrations find their perfect stage.
@@ -101,7 +101,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3 text-sm text-[#B0A8A8]">
                 <Mail className="w-4 h-4 text-[#829796] shrink-0" />
-                hello@velvethall.ng
+                hello@beevelthalls.com
               </li>
             </ul>
           </motion.div>
@@ -135,7 +135,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-white/40">
-            &copy; 2026 Velvet Hall. All rights reserved.
+            &copy; 2026 BeeVelt Halls. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <span className="text-xs text-white/40 hover:text-white/60 cursor-pointer transition-colors">

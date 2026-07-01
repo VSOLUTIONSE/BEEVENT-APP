@@ -51,7 +51,7 @@ export default function Signup() {
           <div className="text-center mb-8">
             <h1 className="font-serif text-3xl text-white mb-2">Create Account</h1>
             <p className="text-sm text-[#B0A8A8]">
-              Sign up to start booking events at Velvet Hall
+              Sign up to start booking events at BeeVelt Halls
             </p>
           </div>
 
