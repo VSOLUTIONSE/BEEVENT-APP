@@ -1,73 +1,51 @@
-# React + TypeScript + Vite
+# BeeVelt Halls — Event Centre Booking Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack event venue booking platform for managing reservations, packages, add-on services, payments, and staff operations.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Venue showcase** — Home page with hero, venue details, packages, and availability calendar
+- **Multi-step booking** — Select a date, choose a package, add extras, and pay — all in one flow
+- **User authentication** — JWT-based email/password signup and login
+- **User dashboard** — View your bookings, check status, and manage profile settings
+- **Admin dashboard** — Oversee all bookings, approve or reject requests, view revenue analytics and monthly trends
+- **Staff management** — Assign roles (staff, manager, accountant, admin) and track activity
+- **Payment integration** — Paystack-powered payments with secure SSL encryption
+- **Calendar management** — View availability, manage blocked dates
+- **Add-on services** — Optional extras (decor, AV, power backup) per booking
+- **File uploads** — S3 presigned URL support for event briefs and media
 
-## React Compiler
+## Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Layer | Technology |
+|-------|-----------|
+| Frontend | React 19, TypeScript, Tailwind CSS v3, shadcn/ui (Radix Primitives) |
+| Animation | GSAP, Framer Motion, Lenis |
+| Backend | Hono (HTTP server), tRPC (type-safe API layer) |
+| Database | Neon (Serverless Postgres) via Drizzle ORM |
+| Auth | JWT (email + password, jose) |
+| Payments | Paystack |
+| File storage | AWS S3 (presigned URLs) |
+| Validation | Zod, React Hook Form |
+| Charts | Recharts |
+| Build | Vite, esbuild |
 
-## Expanding the ESLint configuration
+## Getting started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+npm install
+cp .env.example .env   # fill in DATABASE_URL and JWT_SECRET
+npm run db:generate
+npm run db:migrate
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Project structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/         — React frontend (pages, components, design tokens)
+api/         — Hono server + tRPC routers (auth, venue, booking, payment, admin, calendar)
+db/          — Drizzle schema, relations, migrations, seed data
+contracts/   — Shared types, constants, and error definitions
+public/      — Static assets
 ```
